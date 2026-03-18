@@ -1,8 +1,4 @@
-// compiple with ->gcc -Wall -O0 -g main.c read_state.c -o main $(mysql_config --cflags --libs)
-/*TODO:gcc -Wall -O0 -g supervisor_v1.c read_state.c write_state.c mysql_utils/mysql_utils_v1.c dasgip_utils/dasgip_utils_v1.c -o main $(mysql_config --cflags --libs)
- * 1. make sure that prev state is read first
- *
- */
+
 
 #include "includes/main.h"
 #include "includes/dasgip_state.h"
