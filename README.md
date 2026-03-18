@@ -8,7 +8,7 @@ Dasware PC (VBA writes state files) → Dasware PC (.bat shares files) → Pi (C
 
 
 ## Architecture
-![PCDasware Architecture](docs/dasgip_scada_arch_v3.png)
+![PCDasware Architecture](doc/dasgip_scada_arch_v3.png)
 
 
 | File / Folder | Description |
