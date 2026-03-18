@@ -1,22 +1,24 @@
 # DASGIP SCADA Gateway
 
-A C-based gateway that bridges DASGIP bioreactor vessel data with a MySQL database, supporting up to 8 vessels via multithreading.
+A C-based gateway that bridges DASGIP bioreactor vessel data with a SQL database, supporting up to 8 vessels access to and from SCADA.
+
+
+## How It Works
+Dasware PC (VBA writes state files) → Dasware PC (.bat shares files) → Pi (C/MariaDB syncs state into DB) → SCADA (reads states, pushes control tags back to DB) → Pi (C reads control table, writes action files) → Dasware PC (.bat shares back) → Dasware PC (VBA reads actions)
+
 
 ## Architecture
+![PCDasware Architecture](docs/PCDasware_architecture.png)
+
 
 | File / Folder | Description |
 |---|---|
 | `supervisor.c` | Main process — manages vessel threads |
-| `vessel_control` | Reads DB and writes commands to vessels |
 | `dasgip_utils/` | DASGIP communication utilities |
 | `mysql_utils/` | Database read/write utilities |
 | `includes/` | Shared headers |
 
-## How It Works
 
-1. Each vessel has a state file (`vessel_#_state.txt`) updated by the DASGIP system
-2. The supervisor reads state files and writes data to the MySQL database
-3. `vessel_control` reads the DB and sends commands back to vessels
 
 ## Build
 
