@@ -1,6 +1,6 @@
 # DASGIP SCADA Gateway
 
-A Rasp Pi-based gateway that bridges DASGIP bioreactor vessel data with a SQL database, supporting up to 8 vessels access to and from SCADA.
+A Rasp Pi-based gateway that bridges DASGIP bioreactor vessel data with a SQL database, supporting up to 8 vessels with access to SCADA.
 
 
 ## How It Works
