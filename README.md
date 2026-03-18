@@ -33,4 +33,4 @@ make
 | 2026-02-09 | Initial version — `main_loop_2.c` reads state files, writes to DB; `vessel_control.c` reads DB and writes commands to vessels |
 | 2026-02-18 | `supervisor_v1.c` introduced as new main function |
 | 2026-02-24 | `supervisor_v1.c` cleaned and tested; `supervisor_v2.c` created as single-thread reference implementation |
-| 2026-02-24 | `supervisor_v3.c` started — multi-vessel/multi-thread support via pthreads |
+| 2026-02-24 | `supervisor_v3.c` started — multi-vessel/multi-thread support via pthreads TODO: cleanup needed! |
